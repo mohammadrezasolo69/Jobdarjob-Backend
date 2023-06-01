@@ -2,7 +2,9 @@ from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular import views as drf_spectacular_view
 
-urlpatterns_api_v1 = []
+urlpatterns_api_v1 = [
+    path('jobs/', include('job.urls_api'),name='job_api')
+]
 
 urlpatterns = [
     path('admin/', admin.site.urls),

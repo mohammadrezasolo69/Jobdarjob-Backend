@@ -40,7 +40,10 @@ THIRD_PARTY_APPS = [
     'rest_framework',
 ]
 
-MY_APPS = []
+MY_APPS = [
+    'job.apps.JobConfig',
+]
+
 
 INSTALLED_APPS = INTERNAL_APPS + THIRD_PARTY_APPS + MY_APPS
 
