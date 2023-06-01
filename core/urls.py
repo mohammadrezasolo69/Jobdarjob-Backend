@@ -1,8 +1,12 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+
+urlpatterns_api_v1 = []
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('api/v1/', include(urlpatterns_api_v1))
 ]
 
 # ----------------------------------- Config Static ------------------------------------
