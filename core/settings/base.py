@@ -87,9 +87,20 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # },
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'clickhouse_backend.backend',
+        'NAME': env('NAME_DB'),
+        'HOST': env("HOST_DB"),
+        'USER': env("USER_DB"),
+        'PASSWORD': env("PASSWORD_DB"),
+        'TEST': {
+            'fake_transaction': True
+        }
     }
 }
 

@@ -1,6 +1,9 @@
 asgiref==3.7.2
 attrs==23.1.0
+clickhouse-driver==0.2.5
+clickhouse-pool==0.5.3
 Django==4.2.1
+django-clickhouse-backend==1.0.2
 django-environ==0.10.0
 djangorestframework==3.14.0
 drf-spectacular==0.26.2
@@ -12,4 +15,5 @@ pytz==2023.3
 PyYAML==6.0
 sqlparse==0.4.4
 typing_extensions==4.6.2
+tzlocal==5.0.1
 uritemplate==4.1.1
