@@ -8,8 +8,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # urls drf_spectacular
+    path('', drf_spectacular_view.SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
     path('api/v1/schema/', drf_spectacular_view.SpectacularAPIView.as_view(api_version='v1'), name='schema'),
-    path('api/v1/schema/redoc/', drf_spectacular_view.SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
     path('api/v1/schema/swagger-ui/', drf_spectacular_view.SpectacularSwaggerView.as_view(url_name='schema'),
          name='swagger-ui'),
 

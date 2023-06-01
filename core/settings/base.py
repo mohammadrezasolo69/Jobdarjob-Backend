@@ -37,6 +37,7 @@ INTERNAL_APPS = [
 THIRD_PARTY_APPS = [
     'drf_spectacular',
     'drf_spectacular_sidecar',
+    'rest_framework',
 ]
 
 MY_APPS = []
@@ -157,4 +158,10 @@ SPECTACULAR_SETTINGS = {
     'SWAGGER_UI_DIST': 'SIDECAR',
     'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
     'REDOC_DIST': 'SIDECAR'
+}
+
+
+# Config DRF
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
