@@ -90,6 +90,17 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+
+    'clickhouse': {
+        'ENGINE': 'clickhouse_backend.backend',
+        'NAME': env('NAME_DB'),
+        'HOST': env("HOST_DB"),
+        'USER': env("USER_DB"),
+        'PASSWORD': env("PASSWORD_DB"),
+        'TEST': {
+            'fake_transaction': True
+        }
     }
 }
 
