@@ -1,11 +1,19 @@
 from django.contrib import admin
 from django.urls import path, include
+from drf_spectacular import views as drf_spectacular_view
 
 urlpatterns_api_v1 = []
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    # urls drf_spectacular
+    path('api/v1/schema/', drf_spectacular_view.SpectacularAPIView.as_view(api_version='v1'), name='schema'),
+    path('api/v1/schema/redoc/', drf_spectacular_view.SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+    path('api/v1/schema/swagger-ui/', drf_spectacular_view.SpectacularSwaggerView.as_view(url_name='schema'),
+         name='swagger-ui'),
+
+    # urls my apps
     path('api/v1/', include(urlpatterns_api_v1))
 ]
 
