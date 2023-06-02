@@ -38,6 +38,7 @@ THIRD_PARTY_APPS = [
     'drf_spectacular',
     'drf_spectacular_sidecar',
     'rest_framework',
+    'django_filters'
 ]
 
 MY_APPS = [
