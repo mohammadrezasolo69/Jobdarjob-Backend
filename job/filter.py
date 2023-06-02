@@ -6,7 +6,9 @@ from job.models import Job
 class JobFilter(django_filters.FilterSet):
     TYPE_CHOICES = (
         ('تمام وقت','تمام وقت'),
-        ('پاره وقت','پاره وقت')
+        ('پاره وقت','پاره وقت'),
+        ('کاراموزی','کاراموزی'),
+        ('دورکاری','دورکاری')
     )
     skills = django_filters.BaseCSVFilter(field_name='skills', lookup_expr='contains')
     category = django_filters.CharFilter(field_name='category', lookup_expr='contains')
@@ -18,5 +20,5 @@ class JobFilter(django_filters.FilterSet):
         model = Job
         fields = (
             'label', 'company_name', 'category', 'location',
-            'type_cooperation', 'skills'
+            'type_cooperation', 'skills','work_experience'
         )
