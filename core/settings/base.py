@@ -175,5 +175,7 @@ SPECTACULAR_SETTINGS = {
 
 # Config DRF
 REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'core.pagination.CustomPagination',
+    'PAGE_SIZE': 12,
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
