@@ -9,5 +9,5 @@ class JobListSerializer(serializers.ModelSerializer):
         fields = (
             'id', 'link', 'label', 'company_name', 'company_cover',
             'title', 'category', 'location', 'type_cooperation',
-            'publication_date', 'salary', 'skills'
+            'publication_date', 'salary', 'skills','work_experience'
         )
