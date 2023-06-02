@@ -12,7 +12,7 @@ class Job(models.ClickhouseModel):
             order_by=['publication_date'],
         )
 
-    id = models.UUIDField(unique=True, default=uuid.uuid4,primary_key=True)
+    id = models.UUIDField(unique=True, primary_key=True, default=uuid.uuid4())
     company_id = models.StringField()
     link = models.StringField()
     label = models.StringField()
