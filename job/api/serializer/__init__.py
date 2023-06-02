@@ -1,0 +1,2 @@
+from .serializer_job_list import JobListSerializer
+from .serializer_job_detail import JobDetailSerializer
