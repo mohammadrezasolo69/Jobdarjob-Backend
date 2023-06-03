@@ -3,8 +3,11 @@ SECRET_KEY = ''
 DEBUG = ''
 
 # ----------------------- Clickhouse env ----------------------
-NAME_DB = ''
-HOST_DB = ''
-USER_DB = ''
-PASSWORD_DB = ''
-PORT_DB = ''
+CLICKHOUSE_NAME_DB = ''
+CLICKHOUSE_HOST_DB = ''
+CLICKHOUSE_USER_DB = ''
+CLICKHOUSE_PASSWORD_DB = ''
+CLICKHOUSE_PORT_DB = ''
+
+# ----------------------- Sentry env ----------------------
+SENTRY_DNS = ''

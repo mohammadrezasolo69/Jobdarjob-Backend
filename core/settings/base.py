@@ -98,11 +98,11 @@ DATABASES = {
 
     'clickhouse': {
         'ENGINE': 'clickhouse_backend.backend',
-        'NAME': env('NAME_DB'),
-        'HOST': env("HOST_DB"),
-        'PORT': env('PORT_DB'),
-        'USER': env("USER_DB"),
-        'PASSWORD': env("PASSWORD_DB"),
+        'NAME': env('CLICKHOUSE_NAME_DB'),
+        'HOST': env("CLICKHOUSE_HOST_DB"),
+        'PORT': env('CLICKHOUSE_PORT_DB'),
+        'USER': env("CLICKHOUSE_USER_DB"),
+        'PASSWORD': env("CLICKHOUSE_PASSWORD_DB"),
     }
 }
 DATABASE_ROUTERS = ['core.dbrouters.ClickHouseRouter']
