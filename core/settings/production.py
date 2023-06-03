@@ -1,8 +1,8 @@
+from .base import *
+
 # Config Sentry
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
-
-from .base import *
 
 sentry_sdk.init(
     dsn=env('DNS'),
