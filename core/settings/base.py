@@ -98,11 +98,11 @@ DATABASES = {
 
     'clickhouse': {
         'ENGINE': 'clickhouse_backend.backend',
-        'NAME': env('NAME_DB'),
-        'HOST': env("HOST_DB"),
-        'PORT': env('PORT_DB'),
-        'USER': env("USER_DB"),
-        'PASSWORD': env("PASSWORD_DB"),
+        'NAME': env('CLICKHOUSE_NAME_DB'),
+        'HOST': env("CLICKHOUSE_HOST_DB"),
+        'PORT': env('CLICKHOUSE_PORT_DB'),
+        'USER': env("CLICKHOUSE_USER_DB"),
+        'PASSWORD': env("CLICKHOUSE_PASSWORD_DB"),
     }
 }
 DATABASE_ROUTERS = ['core.dbrouters.ClickHouseRouter']
@@ -147,8 +147,8 @@ USE_TZ = False
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'statics/')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+STATIC_ROOT = os.path.join(BASE_DIR.parent, 'statics/')
+MEDIA_ROOT = os.path.join(BASE_DIR.parent, 'media/')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR.parent, 'assets')
@@ -173,10 +173,10 @@ SPECTACULAR_SETTINGS = {
     'REDOC_DIST': 'SIDECAR'
 }
 
-
 # Config DRF
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'core.pagination.CustomPagination',
     'PAGE_SIZE': 12,
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
+
